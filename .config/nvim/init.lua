@@ -27,7 +27,9 @@ require('lazy').setup {
   require 'plugins.formatter',
   require 'plugins.misc',
   require 'plugins.comment',
+  require 'plugins.gitsigns',
+  require 'plugins.git-diff',
 }
 
--- Todos - 
+-- Todos -
 -- backslash seemes to only open the neo tree. It should toggle it. Or bind the neotree to ctrl + e to open/close
