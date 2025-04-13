@@ -313,11 +313,50 @@ return {
 
     vim.cmd [[nnoremap \ :Neotree reveal<cr>]]
     vim.keymap.set('n', '<C-b>', ':Neotree toggle position=left<CR>', { noremap = true, silent = true }) -- focus file explorer
+
+    local previous_win = nil
+
+    vim.keymap.set('n', '<C-e>', function()
+      local neotree_win = nil
+
+      -- Find the Neo-tree window (if it exists)
+      for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local buf = vim.api.nvim_win_get_buf(win)
+        local ft = vim.api.nvim_buf_get_option(buf, 'filetype')
+        if ft == 'neo-tree' then
+          neotree_win = win
+          break
+        end
+      end
+
+      local current_win = vim.api.nvim_get_current_win()
+
+      if neotree_win == nil then
+        -- Neo-tree is not open: open it and store current window
+        previous_win = current_win
+        require('neo-tree.command').execute { toggle = true, dir = vim.loop.cwd() }
+      elseif current_win ~= neotree_win then
+        -- Neo-tree is open but not focused: store current and switch to it
+        previous_win = current_win
+        vim.api.nvim_set_current_win(neotree_win)
+      else
+        -- Neo-tree is focused: go back to previous window if valid
+        if previous_win and vim.api.nvim_win_is_valid(previous_win) then
+          vim.api.nvim_set_current_win(previous_win)
+        end
+      end
+    end, { noremap = true, silent = true })
     vim.keymap.set('n', '<leader>ngs', ':Neotree float git_status<CR>', { noremap = true, silent = true }) -- open git status window
     -- Highlight current opened file
     vim.api.nvim_set_hl(0, 'NeoTreeFileNameOpened', {
       fg = '#FFD700', -- Bright gold text
       bold = true,
+    })
+    vim.api.nvim_create_autocmd('VimEnter', {
+      command = 'set nornu nonu | Neotree toggle',
+    })
+    vim.api.nvim_create_autocmd('BufEnter', {
+      command = 'set rnu nu',
     })
   end,
 }

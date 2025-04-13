@@ -44,8 +44,8 @@ vim.keymap.set('n', '<C-q>', function()
 end, opts)
 
 -- Window management
-vim.keymap.set('n', '<M-l>', '<C-w>v', opts) -- split window vertically
-vim.keymap.set('n', '<M-h>', '<C-w>v', opts) -- split window vertically
+vim.keymap.set('n', '<M-l>', '<c-w>v', opts) -- split window vertically
+vim.keymap.set('n', '<M-h>', '<c-w>v', opts) -- split window vertically
 -- vim.keymap.set('n', '<M-k>', '<C-w>s', opts) -- split window horizontally
 -- vim.keymap.set('n', '<M-j>', '<C-w>s', opts) -- split window horizontally
 vim.keymap.set('n', '<M-=>', '<C-w>=', opts) -- make split windows equal width & height
