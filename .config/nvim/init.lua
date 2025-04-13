@@ -29,7 +29,12 @@ require('lazy').setup {
   require 'plugins.comment',
   require 'plugins.gitsigns',
   require 'plugins.git-diff',
+  require 'plugins.surround',
 }
 
 -- Todos -
--- backslash seemes to only open the neo tree. It should toggle it. Or bind the neotree to ctrl + e to open/close
+-- Add code folding/unfolding
+-- show diagnostics in floating window
+-- add multicursor editing
+-- make neovim scrolling smooth
+-- make neovim beautiful
