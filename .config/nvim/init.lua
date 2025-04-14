@@ -30,11 +30,11 @@ require('lazy').setup {
   require 'plugins.gitsigns',
   require 'plugins.git-diff',
   require 'plugins.surround',
+  require 'plugins.folding',
+  require 'plugins.multicursor',
 }
 
 -- Todos -
--- Add code folding/unfolding
+-- Add code folding/unfolding - done
 -- show diagnostics in floating window
--- add multicursor editing
--- make neovim scrolling smooth
--- make neovim beautiful
+-- add multicursor editing - done
