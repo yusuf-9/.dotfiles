@@ -61,6 +61,9 @@ return {
           file_ignore_patterns = { 'node_modules', '.git', '.venv' },
           hidden = true,
         },
+        colorscheme = {
+          enable_preview = true,
+        },
       },
       live_grep = {
         file_ignore_patterns = { 'node_modules', '.git', '.venv' },

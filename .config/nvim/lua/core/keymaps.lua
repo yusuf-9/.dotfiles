@@ -18,10 +18,10 @@ vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 vim.keymap.set('n', 'x', '"_x', opts)
 
 -- Vertical scroll 10 lines at once instead of the whole page
-vim.keymap.set('n', '<C-d>', '10jzz', opts)
-vim.keymap.set('n', '<C-u>', '10kzz', opts)
 vim.keymap.set('n', '<C-M-j>', '10jzz', opts)
 vim.keymap.set('n', '<C-M-k>', '10kzz', opts)
+vim.keymap.set('v', '<C-M-j>', '10jzz', opts)
+vim.keymap.set('v', '<C-M-k>', '10kzz', opts)
 
 -- Find and center
 vim.keymap.set('n', 'n', 'nzzzv', opts)
@@ -74,6 +74,12 @@ vim.keymap.set('n', '<C-l>', 'e', opts)
 vim.keymap.set('v', '<C-h>', 'b', opts)
 vim.keymap.set('v', '<C-l>', 'e', opts)
 
+-- Move around with ctrl + h/j/k/l in insert mode
+vim.keymap.set('i', '<C-j>', '<Down>', opts)
+vim.keymap.set('i', '<C-k>', '<Up>', opts)
+vim.keymap.set('i', '<C-h>', '<Left>', opts)
+vim.keymap.set('i', '<C-l>', '<Right>', opts)
+
 -- Jump to end/start of line using ctrl+clt+h/l
 vim.keymap.set('n', '<C-M-h>', '^', opts)
 vim.keymap.set('n', '<C-M-l>', '$', opts)
@@ -90,5 +96,8 @@ vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', opts) -- move line down(n)
 vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", opts) -- move selection down (visual)
 vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", opts) -- move selection up (visual)
 
+-- G should take to the bottom and center the text
+vim.keymap.set('n', 'G', 'Gzz', opts)
+
 -- Delete one word at a time with Ctrl+Backspace in Insert Mode
-vim.keymap.set('i', '<C-H>', '<C-w>', opts) -- <C-H> is usually Ctrl+Backspace
+-- vim.keymap.set('i', '<C-H>', '<C-w>', opts) -- <C-H> is usually Ctrl+Backspace
