@@ -37,12 +37,6 @@ return {
       end,
     }
 
-    -- Keybindings
-    vim.keymap.set('n', '<C-S-{>', 'zc', { desc = 'Fold current' })
-    vim.keymap.set('n', '<C-S-}>', 'zo', { desc = 'Unfold current' })
-    -- vim.keymap.set('n', '<C-S-[>', 'zM', { desc = 'Fold all' })
-    -- vim.keymap.set('n', '<C-S-]>', 'zR', { desc = 'Unfold all' })
-
     -- Optional: Better fold text appearance
     vim.opt.foldcolumn = '1'
     vim.opt.foldlevel = 99

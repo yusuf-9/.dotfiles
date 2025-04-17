@@ -101,3 +101,15 @@ vim.keymap.set('n', 'G', 'Gzz', opts)
 
 -- Delete one word at a time with Ctrl+Backspace in Insert Mode
 -- vim.keymap.set('i', '<C-H>', '<C-w>', opts) -- <C-H> is usually Ctrl+Backspace
+
+-- Clear the search register using esc (only if it is non-empty)
+vim.keymap.set('n', '<Esc>', function()
+  local search = vim.fn.getreg '/'
+  if search ~= '' then
+    vim.cmd 'nohlsearch'
+    vim.fn.setreg('/', '')
+    vim.notify('Search cleared', vim.log.levels.INFO, { title = 'Neovim' })
+  else
+    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', true)
+  end
+end, { desc = 'Smart Esc: Clear search if active' })
