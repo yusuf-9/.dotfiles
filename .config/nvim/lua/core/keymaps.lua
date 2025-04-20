@@ -113,3 +113,20 @@ vim.keymap.set('n', '<Esc>', function()
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', true)
   end
 end, { desc = 'Smart Esc: Clear search if active' })
+
+-- Toggle diagnostics in the current buffer
+local diagnostics_enabled = true
+
+vim.keymap.set('n', '<leader>td', function()
+  diagnostics_enabled = not diagnostics_enabled
+  if diagnostics_enabled then
+    vim.diagnostic.enable(0)
+    vim.notify('Diagnostics enabled', vim.log.levels.INFO)
+  else
+    vim.diagnostic.disable(0)
+    vim.notify('Diagnostics disabled', vim.log.levels.WARN)
+  end
+end, { desc = 'Toggle diagnostics' })
+
+-- prevent copying of the word when using "c"
+vim.keymap.set({ 'n', 'x' }, 'c', '"_c', opts)
