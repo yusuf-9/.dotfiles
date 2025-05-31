@@ -43,3 +43,7 @@ vim.opt.formatoptions:remove { 'c', 'r', 'o' } -- Don't insert the current comme
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- Separate Vim plugins from Neovim in case Vim still in use (default: includes this path if Vim is installed)
 vim.o.laststatus = 0
 vim.opt.incsearch = true
+
+-- Enable undercurl in terminal (needed for proper rendering)
+vim.cmd [[let &t_Cs = "\e[4:3m"]] -- Start undercurl
+vim.cmd [[let &t_Ce = "\e[4:0m"]] -- End undercurl

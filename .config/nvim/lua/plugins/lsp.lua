@@ -110,6 +110,7 @@ return {
             vim.diagnostic.open_float(nil, { focus = false })
           end,
         })
+
         -- The following two autocommands are used to highlight references of the
         -- word under your cursor when your cursor rests there for a little while.
         --    See `:help CursorHold` for information about when this is executed
@@ -150,6 +151,14 @@ return {
         -- end
       end,
     })
+
+    vim.diagnostic.config {
+      virtual_text = false,
+      underline = {
+        severity = { min = vim.diagnostic.severity.HINT }, -- Underline all diagnostics
+      },
+      signs = true,
+    }
 
     -- LSP servers and clients are able to communicate to each other what features they support.
     --  By default, Neovim doesn't support everything that is in the LSP specification.
@@ -204,6 +213,8 @@ return {
       -- terraformls = {},
       jsonls = {},
       yamlls = {},
+      emmet_language_server = {},
+      eslint = {},
 
       lua_ls = {
         -- cmd = {...},
@@ -237,7 +248,9 @@ return {
     --    :Mason
     --
     --  You can press `g?` for help in this menu.
-    require('mason').setup()
+    require('mason').setup {
+      PATH = 'prepend',
+    }
 
     -- You can add other tools here that you want Mason to install
     -- for you, so that they are available from within Neovim.

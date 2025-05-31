@@ -49,6 +49,19 @@ return {
       --           return a.type > b.type
       --       end
       --   end , -- this sorts files and directories descendantly
+      -- event_handlers = {
+      --   {
+      --     event = 'after_render',
+      --     handler = function()
+      --       local state = require('neo-tree.sources.manager').get_state 'filesystem'
+      --       if not require('neo-tree.sources.common.preview').is_active() then
+      --         -- Pass your actual config here if needed
+      --         state.config = { use_float = false }
+      --         state.commands.toggle_preview(state)
+      --       end
+      --     end,
+      --   },
+      -- },
       default_component_configs = {
         container = {
           enable_character_fade = true,
@@ -142,7 +155,9 @@ return {
           ['<2-LeftMouse>'] = 'open',
           ['<cr>'] = 'open',
           ['<esc>'] = 'cancel', -- close preview or floating neo-tree window
-          ['P'] = { 'toggle_preview' },
+          ['P'] = { 'toggle_preview', config = {
+            use_float = false,
+          } },
           ['l'] = 'open',
           --['S'] = 'open_split',
           --['s'] = 'open_vsplit',
