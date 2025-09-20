@@ -21,6 +21,8 @@ return {
       'tsx',
       'css',
       'html',
+      'rust',
+      'jsx',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
@@ -33,6 +35,17 @@ return {
     },
     indent = { enable = true, disable = { 'ruby' } },
   },
+  config = function()
+    require('nvim-treesitter.configs').setup {
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          node_incremental = 'v',
+          node_decremental = 'V',
+        },
+      },
+    }
+  end,
   -- There are additional nvim-treesitter modules that you can use to interact
   -- with nvim-treesitter. You should go explore a few and see what interests you:
   --

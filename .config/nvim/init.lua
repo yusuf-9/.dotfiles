@@ -1,5 +1,6 @@
 require 'core.options' -- Load general options
 require 'core.keymaps' -- Load general keymaps
+-- require 'core.keymaps-vscode' -- Load general keymaps (vscode)
 require 'core.snippets' -- Custom code snippets
 
 -- Set up the Lazy plugin manager
@@ -30,7 +31,9 @@ require('lazy').setup {
   require 'plugins.gitsigns',
   require 'plugins.git-diff',
   require 'plugins.surround',
-  -- require 'plugins.folding',
+  require 'plugins.folding',
   require 'plugins.multicursor',
   require 'plugins.scrollbar',
+  require 'plugins.ai-autocomplete',
+  require 'plugins.ai-agent',
 }

@@ -1,0 +1,275 @@
+-- -- -- Set leader key
+-- -- vim.g.mapleader = ' '
+-- -- vim.g.maplocalleader = ' '
+-- --
+-- -- -- Disable the spacebar key's default behavior in Normal and Visual modes
+-- -- vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+-- --
+-- -- -- For conciseness
+-- -- local opts = { noremap = true, silent = true }
+-- --
+-- -- -- save file
+-- -- vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
+-- -- vim.keymap.set('i', '<C-s>', '<Esc><cmd> w <CR>', opts)
+-- --
+-- -- -- save file without auto-formatting
+-- -- vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
+-- --
+-- -- -- delete single character without copying into register
+-- -- vim.keymap.set('n', 'x', '"_x', opts)
+-- --
+-- -- -- Vertical scroll 10 lines at once instead of the whole page
+-- -- vim.keymap.set('n', '<C-M-j>', '10jzz', opts)
+-- -- vim.keymap.set('n', '<C-M-k>', '10kzz', opts)
+-- -- vim.keymap.set('v', '<C-M-j>', '10jzz', opts)
+-- -- vim.keymap.set('v', '<C-M-k>', '10kzz', opts)
+-- -- vim.keymap.set('i', '<C-M-j>', '<Esc>10jzz', opts)
+-- -- vim.keymap.set('i', '<C-M-k>', '<Esc>10kzz', opts)
+-- --
+-- -- -- Find and center
+-- -- vim.keymap.set('n', 'n', 'nzzzv', opts)
+-- -- vim.keymap.set('n', 'N', 'Nzzzv', opts)
+-- --
+-- -- -- Resize with arrows
+-- -- vim.keymap.set('n', '<Up>', 'i', opts)
+-- -- vim.keymap.set('n', '<Down>', 'i', opts)
+-- -- vim.keymap.set('n', '<Left>', 'i', opts)
+-- -- vim.keymap.set('n', '<Right>', 'i', opts)
+-- --
+-- -- -- Buffers
+-- -- vim.keymap.set('n', '<C-n>', ':bnext<CR>', opts)
+-- -- vim.keymap.set('n', '<C-p>', ':bprevious<CR>', opts)
+-- -- vim.keymap.set('n', '<C-q>', ':bdelete!<CR>', opts) -- close buffer
+-- -- vim.keymap.set('n', '<C-q>', function()
+-- --   local current_buf = vim.api.nvim_get_current_buf()
+-- --   vim.cmd 'bprev' -- move to next buffer
+-- --   vim.cmd('bdelete ' .. current_buf) -- then delete the previous one
+-- -- end, opts)
+-- -- vim.keymap.set('i', '<C-n>', '<Esc>:bnext<CR>', opts)
+-- -- vim.keymap.set('i', '<C-p>', '<Esc>:bprevious<CR>', opts)
+-- -- vim.keymap.set('i', '<C-q>', '<Esc>:bdelete!<CR>', opts) -- close buffer
+-- -- vim.keymap.set('i', '<C-q>', function()
+-- --   local current_buf = vim.api.nvim_get_current_buf()
+-- --   vim.cmd 'bprev' -- move to next buffer
+-- --   vim.cmd('bdelete ' .. current_buf) -- then delete the previous one
+-- -- end, opts)
+-- --
+-- -- -- Window management
+-- -- vim.keymap.set('n', '<m-l>', '<c-w>v', opts) -- split window vertically
+-- -- vim.keymap.set('n', '<m-h>', '<c-w>v', opts) -- split window vertically
+-- -- vim.keymap.set('n', '<M-=>', '<C-w>=', opts) -- make split windows equal width & height
+-- -- vim.keymap.set('n', '<M-q>', ':close<CR>', opts) -- close current split window
+-- --
+-- -- vim.keymap.set('i', '<m-l>', '<Esc><c-w>v', opts) -- split window vertically
+-- -- vim.keymap.set('i', '<m-h>', '<Esc><c-w>v', opts) -- split window vertically
+-- -- vim.keymap.set('i', '<M-=>', '<Esc><C-w>=', opts) -- make split windows equal width & height
+-- -- vim.keymap.set('i', '<M-q>', '<Esc>:close<CR>', opts) -- close current split window
+-- --
+-- -- -- -- Toggle line wrapping
+-- -- vim.keymap.set('n', '<M-z>', '<cmd>set wrap!<CR>', opts)
+-- -- --
+-- -- -- -- Stay in indent mode
+-- -- vim.keymap.set('v', '<', '<gv', opts)
+-- -- vim.keymap.set('v', '>', '>gv', opts)
+-- --
+-- -- -- Keep last yanked when pasting
+-- -- vim.keymap.set('v', 'p', '"_dP', opts)
+-- --
+-- -- -- Scroll file up/down with Ctrl+Up/Down in normal and insert mode
+-- -- -- Normal mode
+-- -- vim.keymap.set('n', '<C-Up>', '<C-y>', opts)
+-- -- vim.keymap.set('n', '<C-Down>', '<C-e>', opts)
+-- -- vim.keymap.set('i', '<C-Up>', '<C-y>', opts)
+-- -- vim.keymap.set('i', '<C-Down>', '<C-e>', opts)
+-- --
+-- -- vim.keymap.set('n', '<C-k>', '<C-y>', opts)
+-- -- vim.keymap.set('n', '<C-j>', '<C-e>', opts)
+-- --
+-- -- -- Jump words back/forward with ctrl+h/l
+-- -- vim.keymap.set('n', '<C-h>', 'b', opts)
+-- -- vim.keymap.set('n', '<C-l>', 'e', opts)
+-- -- vim.keymap.set('v', '<C-h>', 'b', opts)
+-- -- vim.keymap.set('v', '<C-l>', 'e', opts)
+-- --
+-- -- -- Move around with ctrl + h/j/k/l in insert mode
+-- -- vim.keymap.set('i', '<C-j>', '<Down>', opts)
+-- -- vim.keymap.set('i', '<C-k>', '<Up>', opts)
+-- -- vim.keymap.set('i', '<C-h>', '<Left>', opts)
+-- -- vim.keymap.set('i', '<C-l>', '<Right>', opts)
+-- --
+-- -- -- jump words with ctrl + shift + h/j in insert mode
+-- -- vim.keymap.set('i', '<C-S-h>', '<Esc>bi', opts)
+-- -- vim.keymap.set('i', '<C-S-l>', '<Esc>ea', opts)
+-- --
+-- -- -- Jump to end/start of line using ctrl+alt+h/l
+-- -- vim.keymap.set('n', '<C-M-h>', '^', opts)
+-- -- vim.keymap.set('n', '<C-M-l>', '$', opts)
+-- -- vim.keymap.set('v', '<C-M-h>', '^', opts)
+-- -- vim.keymap.set('v', '<C-M-l>', '$', opts)
+-- --
+-- -- -- Insert mode (temporarily leave insert mode to scroll)
+-- -- vim.keymap.set('i', '<C-Up>', '<C-o><C-y>', opts)
+-- -- vim.keymap.set('i', '<C-Down>', '<C-o><C-e>', opts)
+-- --
+-- -- -- map alt+j/k to move lines up/down
+-- -- vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', opts) -- move line up(n)
+-- -- vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', opts) -- move line down(n)
+-- -- vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", opts) -- move selection down (visual)
+-- -- vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", opts) -- move selection up (visual)
+-- --
+-- -- -- G should take to the bottom and center the text
+-- -- vim.keymap.set('n', 'G', 'Gzz', opts)
+-- --
+-- -- -- Delete one word at a time with Ctrl+Backspace in Insert Mode
+-- -- -- vim.keymap.set('i', '<C-H>', '<C-w>', opts) -- <C-H> is usually Ctrl+Backspace
+-- --
+-- -- -- Clear the search register using esc (only if it is non-empty)
+-- -- vim.keymap.set('n', '<Esc>', function()
+-- --   local search = vim.fn.getreg '/'
+-- --   if search ~= '' then
+-- --     vim.cmd 'nohlsearch'
+-- --     vim.fn.setreg('/', '')
+-- --     vim.notify('Search cleared', vim.log.levels.INFO, { title = 'Neovim' })
+-- --   else
+-- --     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', true)
+-- --   end
+-- -- end, { desc = 'Smart Esc: Clear search if active' })
+-- --
+-- -- -- Toggle diagnostics in the current buffer
+-- -- local diagnostics_enabled = true
+-- --
+-- -- vim.keymap.set('n', '<leader>td', function()
+-- --   diagnostics_enabled = not diagnostics_enabled
+-- --   if diagnostics_enabled then
+-- --     vim.diagnostic.enable(0)
+-- --     vim.notify('Diagnostics enabled', vim.log.levels.INFO)
+-- --   else
+-- --     vim.diagnostic.disable(0)
+-- --     vim.notify('Diagnostics disabled', vim.log.levels.WARN)
+-- --   end
+-- -- end, { desc = 'Toggle diagnostics' })
+-- --
+-- -- -- prevent copying of the word when using "c"
+-- -- vim.keymap.set({ 'n', 'x' }, 'c', '"_c', opts)
+-- --
+-- -- vim.keymap.set('i', '<C-BS>', '<C-w>', opts)
+-- --
+--
+-- vim.g.mapleader = ' '
+-- vim.g.maplocalleader = ' '
+--
+-- -- Disable the spacebar key's default behavior in Normal and Visual modes
+-- vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+--
+-- local opts = { noremap = true, silent = true }
+--
+-- vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
+--
+-- -- Enter insert mode with arrows
+-- vim.keymap.set('n', '<Up>', 'i<Up>', opts)
+-- vim.keymap.set('n', '<Down>', 'i<Down>', opts)
+-- vim.keymap.set('n', '<Left>', 'i<Left>', opts)
+-- vim.keymap.set('n', '<Right>', 'i<Right>', opts)
+--
+-- -- Jump words with ctrl+arrows in insert mode
+-- vim.keymap.set('i', '<C-Left>', '<Esc>bi', opts)
+-- vim.keymap.set('i', '<C-Right>', '<Esc>ea', opts)
+-- vim.keymap.set('n', '<C-Left>', 'bi', opts)
+-- vim.keymap.set('n', '<C-Right>', 'ea', opts)
+-- vim.keymap.set('v', '<C-Left>', 'b', opts)
+-- vim.keymap.set('v', '<C-Right>', 'e', opts)
+--
+-- -- Jump to start/end of line using ctrl+alt+left/right in all modes
+-- vim.keymap.set('i', '<C-A-Left>', '<Esc>^i', opts)
+-- vim.keymap.set('i', '<C-A-Right>', '<Esc>$a', opts)
+-- vim.keymap.set('n', '<C-A-Left>', '^i', opts)
+-- vim.keymap.set('n', '<C-A-Right>', '$a', opts)
+-- vim.keymap.set('v', '<C-A-Left>', '^', opts)
+-- vim.keymap.set('v', '<C-A-Right>', '$', opts)
+-- vim.keymap.set('i', '<C-A-Up>', '<Esc>10kzz', opts)
+-- vim.keymap.set('i', '<C-A-Down>', '<Esc>10jzz', opts)
+-- vim.keymap.set('n', '<C-A-Up>', '10kzzi', opts)
+-- vim.keymap.set('n', '<C-A-Down>', '10jzzi', opts)
+-- vim.keymap.set('v', '<C-A-Up>', '10kzz', opts)
+-- vim.keymap.set('v', '<C-A-Down>', '10jzz', opts)
+--
+-- -- scroll up/down using ctrl+up/down in all modes
+-- vim.keymap.set('i', '<C-Up>', '<Esc><C-y>', opts)
+-- vim.keymap.set('i', '<C-Down>', '<Esc><C-e>', opts)
+-- vim.keymap.set('n', '<C-Up>', '<C-y>', opts)
+-- vim.keymap.set('n', '<C-Down>', '<C-e>', opts)
+-- vim.keymap.set('v', '<C-Up>', '<C-y>', opts)
+-- vim.keymap.set('v', '<C-Down>', '<C-e>', opts)
+--
+-- -- select text using shift+arrows
+-- vim.keymap.set('i', '<S-Right>', '<Esc>lv', opts)
+-- vim.keymap.set('i', '<S-Left>', '<Esc>v', opts)
+-- vim.keymap.set('i', '<S-Up>', '<Esc>V', opts)
+-- vim.keymap.set('i', '<S-Down>', '<Esc>V', opts)
+--
+-- vim.keymap.set('i', '<C-S-Right>', '<Esc>ve', opts)
+-- vim.keymap.set('i', '<C-S-Left>', '<Esc>vb', opts)
+-- vim.keymap.set('i', '<C-S-Up>', '<Esc>V', opts)
+-- vim.keymap.set('i', '<C-S-Down>', '<Esc>V', opts)
+--
+-- vim.keymap.set('i', '<C-A-S-Right>', '<Esc>v$', opts)
+-- vim.keymap.set('i', '<C-A-S-Left>', '<Esc>v^', opts)
+-- vim.keymap.set('i', '<C-A-S-Up>', '<Esc>v10k', opts)
+-- vim.keymap.set('i', '<C-A-S-Down>', '<Esc>v10j', opts)
+--
+-- vim.keymap.set('v', '<S-Right>', '<Right>', opts)
+-- vim.keymap.set('v', '<S-Left>', '<Left>', opts)
+-- vim.keymap.set('v', '<S-Up>', '<Up>', opts)
+-- vim.keymap.set('v', '<S-Down>', '<Down>', opts)
+--
+-- vim.keymap.set('v', '<C-S-Right>', 'e', opts)
+-- vim.keymap.set('v', '<C-S-Left>', 'b', opts)
+-- vim.keymap.set('v', '<C-S-Up>', '<Up>', opts)
+-- vim.keymap.set('v', '<C-S-Down>', '<Down>', opts)
+--
+-- vim.keymap.set('v', '<C-A-S-Right>', '$', opts)
+-- vim.keymap.set('v', '<C-A-S-Left>', '^', opts)
+-- vim.keymap.set('i', '<C-A-S-Up>', '10k', opts)
+-- vim.keymap.set('i', '<C-A-S-Down>', '10j', opts)
+--
+-- -- copy/paste using ctrl+c/v
+--
+-- -- Add new line using ctrl+Enter
+-- vim.keymap.set('i', '<C-CR>', '<Esc>o', opts)
+--
+-- -- Delete the word behind the cursor using ctrl+backspace
+-- vim.keymap.set('i', '<C-BS>', '<C-w>', opts)
+--
+-- -- save file using ctrl+s
+-- vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
+-- vim.keymap.set('i', '<C-s>', '<Esc><cmd> w <CR>', opts)
+--
+-- -- buffer navigation
+-- vim.keymap.set('i', '<C-n>', '<Esc><cmd>bnext<CR>', opts)
+-- vim.keymap.set('i', '<C-p>', '<Esc><cmd>bprevious<CR>', opts)
+-- vim.keymap.set('i', '<C-q>', '<Esc><cmd>bdelete!<CR>', opts) -- close buffer
+-- vim.keymap.set('i', '<C-q>', function()
+--   local current_buf = vim.api.nvim_get_current_buf()
+--   vim.cmd 'bprev' -- move to next buffer
+--   vim.cmd('bdelete ' .. current_buf) -- then delete the previous one
+-- end, opts)
+-- vim.keymap.set('n', '<C-n>', ':bnext<CR>', opts)
+-- vim.keymap.set('n', '<C-p>', ':bprevious<CR>', opts)
+-- vim.keymap.set('n', '<C-q>', ':bdelete!<CR>', opts) -- close buffer
+-- vim.keymap.set('n', '<C-q>', function()
+--   local current_buf = vim.api.nvim_get_current_buf()
+--   vim.cmd 'bprev' -- move to next buffer
+--   vim.cmd('bdelete ' .. current_buf) -- then delete the previous one
+-- end, opts)
+--
+-- -- Clear the search register using esc (only if it is non-empty)
+-- vim.keymap.set('n', '<Esc>', function()
+--   local search = vim.fn.getreg '/'
+--   if search ~= '' then
+--     vim.cmd 'nohlsearch'
+--     vim.fn.setreg('/', '')
+--     vim.notify('Search cleared', vim.log.levels.INFO, { title = 'Neovim' })
+--   else
+--     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', true)
+--   end
+-- end, { desc = 'Smart Esc: Clear search if active' })

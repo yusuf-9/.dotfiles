@@ -11,3 +11,4 @@ Issues in neovim config -
 - need to make neovim look better (lualine, bufferline, error diagnostics, etc)
 - need to add keybindings for jumping to error diagnostics and stuff
 
+

@@ -154,6 +154,7 @@ return { -- Autocompletion
         },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+        { name = 'crates' },
         { name = 'buffer' },
         { name = 'path' },
       },

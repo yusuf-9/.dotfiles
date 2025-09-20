@@ -80,7 +80,11 @@ vim.keymap.set('i', '<C-k>', '<Up>', opts)
 vim.keymap.set('i', '<C-h>', '<Left>', opts)
 vim.keymap.set('i', '<C-l>', '<Right>', opts)
 
--- Jump to end/start of line using ctrl+clt+h/l
+-- jump words with ctrl + shift + h/j in insert mode
+vim.keymap.set('i', '<C-S-h>', '<Esc>bi', opts)
+vim.keymap.set('i', '<C-S-l>', '<Esc>ea', opts)
+
+-- Jump to end/start of line using ctrl+alt+h/l
 vim.keymap.set('n', '<C-M-h>', '^', opts)
 vim.keymap.set('n', '<C-M-l>', '$', opts)
 vim.keymap.set('v', '<C-M-h>', '^', opts)
@@ -98,7 +102,25 @@ vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", opts) -- move selection up (vis
 
 -- G should take to the bottom and center the text
 vim.keymap.set('n', 'G', 'Gzz', opts)
-
+--
+-- -- enter visual mode and select text using shift+h/j/k/l
+-- vim.keymap.set('n', '<S-h>', 'vh', opts)
+-- vim.keymap.set('n', '<S-l>', 'vl', opts)
+-- vim.keymap.set('n', '<S-j>', 'vj', opts)
+-- vim.keymap.set('n', '<S-k>', 'vk', opts)
+-- vim.keymap.set('n', '<C-S-h>', 'vb', opts)
+-- vim.keymap.set('n', '<C-S-l>', 've', opts)
+-- vim.keymap.set('n', '<C-S-j>', 'vj', opts)
+-- vim.keymap.set('n', '<C-S-k>', 'vk', opts)
+-- vim.keymap.set('v', '<S-h>', 'h', opts)
+-- vim.keymap.set('v', '<S-l>', 'l', opts)
+-- vim.keymap.set('v', '<S-j>', 'j', opts)
+-- vim.keymap.set('v', '<S-k>', 'k', opts)
+-- vim.keymap.set('v', '<C-S-h>', 'b', opts)
+-- vim.keymap.set('v', '<C-S-l>', 'e', opts)
+-- vim.keymap.set('v', '<C-S-j>', 'j', opts)
+-- vim.keymap.set('v', '<C-S-k>', 'k', opts)
+--
 -- Delete one word at a time with Ctrl+Backspace in Insert Mode
 -- vim.keymap.set('i', '<C-H>', '<C-w>', opts) -- <C-H> is usually Ctrl+Backspace
 
@@ -130,3 +152,5 @@ end, { desc = 'Toggle diagnostics' })
 
 -- prevent copying of the word when using "c"
 vim.keymap.set({ 'n', 'x' }, 'c', '"_c', opts)
+
+vim.keymap.set('i', '<C-BS>', '<C-w>', opts)

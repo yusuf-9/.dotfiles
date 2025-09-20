@@ -1,16 +1,16 @@
 return {
   {
     'projekt0n/github-nvim-theme',
-    -- lazy = false,
-    -- priority = 1000,
-    -- config = function()
-    --   require('github-theme').setup {
-    --     options = {},
-    --   }
-    --
-    --   -- Set the theme
-    --   vim.cmd 'colorscheme github_dark_colorblind'
-    -- end,
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('github-theme').setup {
+        options = {},
+      }
+
+      -- Set the theme
+      vim.cmd 'colorscheme github_dark_colorblind'
+    end,
   },
   {
     'webhooked/kanso.nvim',
@@ -114,50 +114,50 @@ return {
     name = 'catppuccin',
     lazy = false,
     priority = 1000,
-    config = function()
-      require('catppuccin').setup {
-        no_italic = true,
-        term_colors = true,
-        transparent_background = false,
-        styles = {
-          comments = {},
-          conditionals = {},
-          loops = {},
-          functions = {},
-          keywords = {},
-          strings = {},
-          variables = {},
-          numbers = {},
-          booleans = {},
-          properties = {},
-          types = {},
-        },
-        color_overrides = {
-          mocha = {
-            base = '#000000',
-            mantle = '#000000',
-            crust = '#000000',
-          },
-        },
-        integrations = {
-          telescope = {
-            enabled = true,
-            style = 'nvchad',
-          },
-          dropbar = {
-            enabled = true,
-            color_mode = true,
-          },
-        },
-        diagnostics = {
-          -- Match your theme's colors
-          underline_error = { undercurl = true, sp = '#ff2d00' },
-          underline_warn = { undercurl = true, sp = '#ffb86c' },
-          underline_info = { undercurl = true, sp = '#8be9fd' },
-          underline_hint = { undercurl = true, sp = '#50fa7b' },
-        },
-      }
-      vim.cmd.colorscheme 'catppuccin' -- Set the theme
-    end,
+    -- config = function()
+    --   require('catppuccin').setup {
+    --     no_italic = true,
+    --     term_colors = true,
+    --     transparent_background = false,
+    --     -- styles = {
+    --     --   comments = {},
+    --     --   conditionals = {},
+    --     --   loops = {},
+    --     --   functions = {},
+    --     --   keywords = {},
+    --     --   strings = {},
+    --     --   variables = {},
+    --     --   numbers = {},
+    --     --   booleans = {},
+    --     --   properties = {},
+    --     --   types = {},
+    --     -- },
+    --     -- color_overrides = {
+    --     --   mocha = {
+    --     --     base = '#000000',
+    --     --     mantle = '#000000',
+    --     --     crust = '#000000',
+    --     --   },
+    --     -- },
+    --     -- integrations = {
+    --     --   telescope = {
+    --     --     enabled = true,
+    --     --     style = 'nvchad',
+    --     --   },
+    --     --   dropbar = {
+    --     --     enabled = true,
+    --     --     color_mode = true,
+    --     --   },
+    --     -- },
+    --     -- diagnostics = {
+    --     --   -- Match your theme's colors
+    --     --   underline_error = { undercurl = true, sp = '#ff2d00' },
+    --     --   underline_warn = { undercurl = true, sp = '#ffb86c' },
+    --     --   underline_info = { undercurl = true, sp = '#8be9fd' },
+    --     --   underline_hint = { undercurl = true, sp = '#50fa7b' },
+    --     -- },
+    --   }
+    --   vim.cmd.colorscheme 'catppuccin' -- Set the theme
+    -- end,
   },
 }
