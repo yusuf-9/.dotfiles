@@ -18,10 +18,10 @@ vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 vim.keymap.set('n', 'x', '"_x', opts)
 
 -- Vertical scroll 10 lines at once instead of the whole page
-vim.keymap.set('n', '<C-M-j>', '10jzz', opts)
-vim.keymap.set('n', '<C-M-k>', '10kzz', opts)
-vim.keymap.set('v', '<C-M-j>', '10jzz', opts)
-vim.keymap.set('v', '<C-M-k>', '10kzz', opts)
+vim.keymap.set('n', '<C-d>', '10jzz', opts)
+vim.keymap.set('n', '<C-u>', '10kzz', opts)
+vim.keymap.set('v', '<C-d>', '10jzz', opts)
+vim.keymap.set('v', '<C-u>', '10kzz', opts)
 
 -- Find and center
 vim.keymap.set('n', 'n', 'nzzzv', opts)
@@ -149,6 +149,10 @@ vim.keymap.set('n', '<leader>td', function()
     vim.notify('Diagnostics disabled', vim.log.levels.WARN)
   end
 end, { desc = 'Toggle diagnostics' })
+
+-- Navigate diagnostics
+vim.keymap.set('n', '<leader>dp', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
+vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
 
 -- prevent copying of the word when using "c"
 vim.keymap.set({ 'n', 'x' }, 'c', '"_c', opts)

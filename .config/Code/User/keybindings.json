@@ -1,3567 +1,1 @@
-[
-  // scroll up/down using ctrl + j/k
-  {
-    "key": "ctrl-j",
-    "command": "scrollLineDown",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl-k",
-    "command": "scrollLineUp",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle sidebar visibility using ctrl + b
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle focus on file explorer using ctrl + e
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  // format code using shift+alt+f
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  // search for files using ctrl+alt+f
-  {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    // navigate between open buffers using ctrl + n/p
-    "key": "ctrl+n",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  // close current file using ctrl+q
-  {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal'"
-  },
-  // move lines up/down using alt+j/k
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy lines up/down using shift+alt+j/k
-  {
-    "key": "shift+alt+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy text up/down/left/right using shift + h/j/k/l
-  // {
-  //   "key": "shift+j",
-  //   "command": "cursorDownSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+k",
-  //   "command": "cursorUpSelect",
-  // scroll up/down using ctrl + j/k
-  {
-    "key": "ctrl-j",
-    "command": "scrollLineDown",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl-k",
-    "command": "scrollLineUp",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle sidebar visibility using ctrl + b
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle focus on file explorer using ctrl + e
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  // format code using shift+alt+f
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  // search for files using ctrl+alt+f
-  {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    // navigate between open buffers using ctrl + n/p
-    "key": "ctrl+n",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  // close current file using ctrl+q
-  {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal'"
-  },
-  // move lines up/down using alt+j/k
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy lines up/down using shift+alt+j/k
-  {
-    "key": "shift+alt+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy text up/down/left/right using shift + h/j/k/l
-  // {
-  //   "key": "shift+j",
-  //   "command": "cursorDownSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+k",
-  //   "command": "cursorUpSelect",
-  // scroll up/down using ctrl + j/k
-  {
-    "key": "ctrl-j",
-    "command": "scrollLineDown",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl-k",
-    "command": "scrollLineUp",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle sidebar visibility using ctrl + b
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle focus on file explorer using ctrl + e
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  // format code using shift+alt+f
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  // search for files using ctrl+alt+f
-  {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    // navigate between open buffers using ctrl + n/p
-    "key": "ctrl+n",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  // close current file using ctrl+q
-  {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal'"
-  },
-  // move lines up/down using alt+j/k
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy lines up/down using shift+alt+j/k
-  {
-    "key": "shift+alt+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy text up/down/left/right using shift + h/j/k/l
-  // {
-  //   "key": "shift+j",
-  //   "command": "cursorDownSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+k",
-  //   "command": "cursorUpSelect",
-  // scroll up/down using ctrl + j/k
-  {
-    "key": "ctrl-j",
-    "command": "scrollLineDown",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl-k",
-    "command": "scrollLineUp",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle sidebar visibility using ctrl + b
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle focus on file explorer using ctrl + e
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  // format code using shift+alt+f
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  // search for files using ctrl+alt+f
-  {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    // navigate between open buffers using ctrl + n/p
-    "key": "ctrl+n",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  // close current file using ctrl+q
-  {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal'"
-  },
-  // move lines up/down using alt+j/k
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy lines up/down using shift+alt+j/k
-  {
-    "key": "shift+alt+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy text up/down/left/right using shift + h/j/k/l
-  // {
-  //   "key": "shift+j",
-  //   "command": "cursorDownSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+k",
-  //   "command": "cursorUpSelect",
-  // scroll up/down using ctrl + j/k
-  {
-    "key": "ctrl-j",
-    "command": "scrollLineDown",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl-k",
-    "command": "scrollLineUp",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle sidebar visibility using ctrl + b
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle focus on file explorer using ctrl + e
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  // format code using shift+alt+f
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  // search for files using ctrl+alt+f
-  {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    // navigate between open buffers using ctrl + n/p
-    "key": "ctrl+n",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  // close current file using ctrl+q
-  {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal'"
-  },
-  // move lines up/down using alt+j/k
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy lines up/down using shift+alt+j/k
-  {
-    "key": "shift+alt+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy text up/down/left/right using shift + h/j/k/l
-  // {
-  //   "key": "shift+j",
-  //   "command": "cursorDownSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+k",
-  //   "command": "cursorUpSelect",
-  // scroll up/down using ctrl + j/k
-  {
-    "key": "ctrl-j",
-    "command": "scrollLineDown",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl-k",
-    "command": "scrollLineUp",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle sidebar visibility using ctrl + b
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle focus on file explorer using ctrl + e
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  // format code using shift+alt+f
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  // search for files using ctrl+alt+f
-  {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    // navigate between open buffers using ctrl + n/p
-    "key": "ctrl+n",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  // close current file using ctrl+q
-  {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal'"
-  },
-  // move lines up/down using alt+j/k
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy lines up/down using shift+alt+j/k
-  {
-    "key": "shift+alt+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy text up/down/left/right using shift + h/j/k/l
-  // {
-  //   "key": "shift+j",
-  //   "command": "cursorDownSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+k",
-  //   "command": "cursorUpSelect",
-  // scroll up/down using ctrl + j/k
-  {
-    "key": "ctrl-j",
-    "command": "scrollLineDown",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl-k",
-    "command": "scrollLineUp",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle sidebar visibility using ctrl + b
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle focus on file explorer using ctrl + e
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  // format code using shift+alt+f
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  // search for files using ctrl+alt+f
-  {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    // navigate between open buffers using ctrl + n/p
-    "key": "ctrl+n",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  // close current file using ctrl+q
-  {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal'"
-  },
-  // move lines up/down using alt+j/k
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy lines up/down using shift+alt+j/k
-  {
-    "key": "shift+alt+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy text up/down/left/right using shift + h/j/k/l
-  // {
-  //   "key": "shift+j",
-  //   "command": "cursorDownSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+k",
-  //   "command": "cursorUpSelect",
-  // scroll up/down using ctrl + j/k
-  {
-    "key": "ctrl-j",
-    "command": "scrollLineDown",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl-k",
-    "command": "scrollLineUp",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle sidebar visibility using ctrl + b
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle focus on file explorer using ctrl + e
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  // format code using shift+alt+f
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  // search for files using ctrl+alt+f
-  {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    // navigate between open buffers using ctrl + n/p
-    "key": "ctrl+n",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl+p",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "vim.mode == 'Normal'"
-  },
-  // close current file using ctrl+q
-  {
-    "key": "ctrl+q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "vim.mode == 'Normal'"
-  },
-  // move lines up/down using alt+j/k
-  {
-    "key": "alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy lines up/down using shift+alt+j/k
-  {
-    "key": "shift+alt+j",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // copy text up/down/left/right using shift + h/j/k/l
-  // {
-  //   "key": "shift+j",
-  //   "command": "cursorDownSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+k",
-  //   "command": "cursorUpSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+alt+h",
-  //   "command": "cursorHomeSelect",
-  //   "when": "textInputFocus"
-  // },
-  // {
-  //   "key": "shift+alt+l",
-  //   "command": "cursorEndSelect",
-  //   "when": "textInputFocus"
-  // },
-  // move editor to left/right split using alt+h/l
-  {
-    "key": "alt+l",
-    "command": "workbench.action.moveEditorToNextGroup",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+h",
-    "command": "workbench.action.moveEditorToPreviousGroup",
-    "when": "editorTextFocus"
-  },
-  // file crud keymaps in file explorer
-  {
-    "key": "r",
-    "command": "renameFile",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "c",
-    "command": "filesExplorer.copy",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "p",
-    "command": "filesExplorer.paste",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "x",
-    "command": "filesExplorer.cut",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "d",
-    "command": "deleteFile",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "m",
-    "command": "workbench.files.action.collapseExplorerFolders",
-    "when": "explorerViewletFocus"
-  },
-  // bind ctrl+d/u to move 10 lines up/down
-  {
-    "key": "ctrl+alt+j",
-    "command": "cursorMove",
-    "args": {
-      "to": "down",
-      "by": "line",
-      "value": 10
-    },
-    "when": "vim.mode == 'Normal' && textInputFocus"
-  },
-  {
-    "key": "ctrl+alt+k",
-    "command": "cursorMove",
-    "args": {
-      "to": "up",
-      "by": "line",
-      "value": 10
-    },
-    "when": "vim.mode == 'Normal' && textInputFocus"
-  },
-  {
-    "key": "ctrl+alt+l",
-    "command": "cursorEnd",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+alt+h",
-    "command": "-cursorEnd",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "ctrl+t",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "vim.mode == 'Normal'"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "workbench.action.chat.newChat",
-    "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "-workbench.action.chat.newChat",
-    "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "workbench.action.chat.newEditSession",
-    "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat && chatLocation == 'editing-session'"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "-workbench.action.chat.newEditSession",
-    "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat && chatLocation == 'editing-session'"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "aichat.newchataction"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "-aichat.newchataction"
-  },
-  {
-    "key": "ctrl+shift+k",
-    "command": "aipopup.action.modal.generate",
-    "when": "editorFocus && !composerBarIsVisible"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "-aipopup.action.modal.generate",
-    "when": "editorFocus && !composerBarIsVisible"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "cursorLeft",
-    "when": "vim.mode == 'Insert' && textInputFocus"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "cursorRight",
-    "when": "vim.mode == 'Insert' && textInputFocus"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "cursorDown",
-    "when": "vim.mode == 'Insert' && textInputFocus"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "cursorUp",
-    "when": "vim.mode == 'Insert' && textInputFocus"
-  },
-]
-
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-             
-             
-  
-    
-                                
-                            
-
-                                  
-    
-                          
-      
-                     
-        
-                                
-
-                                
-                 
-          
-                                    
-
-                                
-
-                                
-            
-                                  
-              
-                                
-                
-              
-                                        
-
-                                
-                        
-              
-                                      
-                
-                                
-                        
-
-                                
-                  
-                                            
-                    
-                    
-                  
-                                                
-
-      
-                                              
-                    
-                                                  
-                                                
-                      
-                                                    
-                                                                            
-                    
-                               
-                                                
-                    
-                             
-                      
-                      
-                        
-                      
-                    
-                    
-                      
-                    
-                                            
-                    
-                                      
-                       
-                        
-                        
-                                                      
-                          
-                        
-                      
-                      
-                    
-                                                
-
-      
-                                                    
-                                                 
-                         
-                        
-                                          
-                                                    
-                                                  
-                     
-                                      
-                                                  
-                                                    
-                      
-                     
-                                      
-                                                
-                                                    
-                      
-                                                  
-                     
-                                      
-                                                    
-                                                  
-                      
-                                                    
-                     
-                                      
-                                                  
-                                                  
-                      
-                                                    
-                     
-                                           
-                                                      
-                                                    
-                      
-                                                    
-                     
-                                          
-                                                    
-                                                    
-                      
-                     
-                                                      
-                                      
-                                                    
-                                                    
-                      
-                     
-                                      
-                                                    
-                                                    
-                      
-                                                  
-                     
-                                      
-                                                    
-                                                    
-                      
-                                                  
-                     
-                                     
-                                                    
-                                                  
-                      
-                     
-                                     
-                                                    
-                                                  
-                      
-                                                    
-                     
-                                           
-                                                  
-                                                  
-                      
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                        
-                                          
-                                                  
-                                                 
-                         
-                        
-                                          
-                                                  
-                                                  
-                     
-                                      
-                                                  
-                                                  
-                      
-                     
-                                      
-                                                
-                                                  
-                      
-                                                  
-                     
-                                      
-                                                  
-                                                  
-                      
-                                                  
-                     
-                                      
-                                                  
-                                                  
-                      
-                                                  
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                     
-                                          
-                                                  
-                                                    
-                      
-                     
-                                                  
-                                      
-                                                  
-                                                    
-                      
-                     
-                                      
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                      
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                     
-                                                  
-                                                    
-                      
-                     
-                                     
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                           
-                                                  
-                                                    
-                      
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                        
-                                          
-                                                  
-                                                 
-                         
-                        
-                                          
-                                                  
-                                                  
-                     
-                                      
-                                                  
-                                                    
-                      
-                     
-                                      
-                                                
-                                                    
-                      
-                                                  
-                     
-                                      
-                                                    
-                                                    
-                      
-                                                  
-                     
-                                      
-                                                  
-                                                  
-                      
-                                                  
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                     
-                                          
-                                                  
-                                                    
-                      
-                     
-                                                  
-                                      
-                                                  
-                                                    
-                      
-                     
-                                      
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                      
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                     
-                                                  
-                                                    
-                      
-                     
-                                     
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                           
-                                                  
-                                                    
-                      
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                        
-                                          
-                                                  
-                                                 
-                         
-                        
-                                          
-                                                  
-                                                 
-                         
-                        
-                                              
-                                                    
-                                                 
-                         
-                        
-                                              
-                                                    
-                                                 
-                         
-                                                  
-                     
-                                     
-                                                    
-                                               
-                      
-                     
-                                     
-                                                  
-                                               
-                      
-                                                  
-                     
-                                 
-                                              
-                                                  
-                      
-                     
-                                 
-                                                  
-                                                  
-                      
-                     
-                                 
-                                                  
-                                                  
-                      
-                     
-                                 
-                                                    
-                                                  
-                      
-                     
-                                 
-                                              
-                                                  
-                      
-                     
-                                 
-                                                    
-                                                    
-                      
-                     
-                                 
-                                                    
-                                                    
-                      
-                                                  
-                     
-                                          
-                                              
-                               
-                                     
-                                     
-                                   
-                        
-                                                    
-                      
-                     
-                                          
-                                              
-                               
-                                   
-                                     
-                                   
-                        
-                                                  
-                      
-                     
-                                          
-                                             
-                                              
-                      
-                     
-                                          
-                                              
-                                              
-                      
-                     
-                                      
-                                                    
-                                                    
-                      
-                     
-                                            
-                                                    
-                                                    
-                      
-                     
-                                      
-                                                  
-                                                  
-                      
-                     
-                                            
-                                                  
-                      
-                    
-                    
-                                      
-                      
-                      
-                    
-                    
-                                            
-                                                
-                    
-                    
-                      
-                                                  
-                      
-                    
-                      
-                      
-                      
-                    
-                     
-                                      
-                                            
-                                              
-                      
-                     
-                      
-                      
-                      
-                    
-                     
-                                      
-                                          
-                                            
-                      
-                     
-                                      
-                                              
-                                              
-                      
-                     
-                                      
-                                            
-                                                
-                    
-                  
-                            
-
-                            
-
-                            
-                    
-                    
-                                          
-                      
-                        
-                                          
-                      
-                                          
-
-                          
-                    
-                      
-                                              
-                        
-                              
-                    
-
-                            
-                          
-                                                  
-                            
-                            
-                          
-                                                    
-
-      
-                                                    
-                            
-                                                      
-                                                    
-                              
-                                                          
-                              
-                                                          
-                                       
-                                             
-                                
-                              
-                                     
-                                           
-                              
-                            
-                                                     
-                                          
-                              
-                                                
-                                                          
-                                  
-                                
-                                                                             
-                                
-                                                                           
-                              
-                            
-                              
-
-                            
-
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-                                
-
-             
-             
-  
-    
-                                
-                            
-
-                                  
-    
-                          
-      
-                     
-        
-                                
-
-                                
-                 
-          
-                                    
-
-                                
-
-                                
-            
-                                  
-              
-                                
-                
-              
-                                        
-
-                                
-                        
-              
-                                      
-                
-                                
-                        
-
-                                
-                  
-                                            
-                    
-                    
-                  
-                                                
-
-      
-                                              
-                    
-                                                  
-                                                
-                      
-                                                    
-                                                                            
-                    
-                               
-                                                
-                    
-                             
-                      
-                      
-                        
-                      
-                    
-                    
-                      
-                    
-                                            
-                    
-                                      
-                       
-                        
-                        
-                                                      
-                          
-                        
-                      
-                      
-                    
-                                                
-
-      
-                                                    
-                                                 
-                         
-                        
-                                          
-                                                    
-                                                  
-                     
-                                      
-                                                  
-                                                    
-                      
-                     
-                                      
-                                                
-                                                    
-                      
-                                                  
-                     
-                                      
-                                                    
-                                                  
-                      
-                                                    
-                     
-                                      
-                                                  
-                                                  
-                      
-                                                    
-                     
-                                           
-                                                      
-                                                    
-                      
-                                                    
-                     
-                                          
-                                                    
-                                                    
-                      
-                     
-                                                      
-                                      
-                                                    
-                                                    
-                      
-                     
-                                      
-                                                    
-                                                    
-                      
-                                                  
-                     
-                                      
-                                                    
-                                                    
-                      
-                                                  
-                     
-                                     
-                                                    
-                                                  
-                      
-                     
-                                     
-                                                    
-                                                  
-                      
-                                                    
-                     
-                                           
-                                                  
-                                                  
-                      
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                        
-                                          
-                                                  
-                                                 
-                         
-                        
-                                          
-                                                  
-                                                  
-                     
-                                      
-                                                  
-                                                  
-                      
-                     
-                                      
-                                                
-                                                  
-                      
-                                                  
-                     
-                                      
-                                                  
-                                                  
-                      
-                                                  
-                     
-                                      
-                                                  
-                                                  
-                      
-                                                  
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                     
-                                          
-                                                  
-                                                    
-                      
-                     
-                                                  
-                                      
-                                                  
-                                                    
-                      
-                     
-                                      
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                      
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                     
-                                                  
-                                                    
-                      
-                     
-                                     
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                           
-                                                  
-                                                    
-                      
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                        
-                                          
-                                                  
-                                                 
-                         
-                        
-                                          
-                                                  
-                                                  
-                     
-                                      
-                                                  
-                                                    
-                      
-                     
-                                      
-                                                
-                                                    
-                      
-                                                  
-                     
-                                      
-                                                    
-                                                    
-                      
-                                                  
-                     
-                                      
-                                                  
-                                                  
-                      
-                                                  
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                     
-                                          
-                                                  
-                                                    
-                      
-                     
-                                                  
-                                      
-                                                  
-                                                    
-                      
-                     
-                                      
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                      
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                     
-                                                  
-                                                    
-                      
-                     
-                                     
-                                                  
-                                                    
-                      
-                                                    
-                     
-                                           
-                                                  
-                                                    
-                      
-                     
-                                           
-                                                  
-                                                  
-                      
-                                                    
-                        
-                                          
-                                                  
-                                                 
-                         
-                        
-                                          
-                                                  
-                                                 
-                         
-                        
-                                              
-                                                    
-                                                 
-                         
-                        
-                                              
-                                                    
-                                                 
-                         
-                                                  
-                     
-                                     
-                                                    
-                                               
-                      
-                     
-                                     
-                                                  
-                                               
-                      
-                                                  
-                     
-                                 
-                                              
-                                                  
-                      
-                     
-                                 
-                                                  
-                                                  
-                      
-                     
-                                 
-                                                  
-                                                  
-                      
-                     
-                                 
-                                                    
-                                                  
-                      
-                     
-                                 
-                                              
-                                                  
-                      
-                     
-                                 
-                                                    
-                                                    
-                      
-                     
-                                 
-                                                    
-                                                    
-                      
-                                                  
-                     
-                                          
-                                              
-                               
-                                     
-                                     
-                                   
-                        
-                                                    
-                      
-                     
-                                          
-                                              
-                               
-                                   
-                                     
-                                   
-                        
-                                                  
-                      
-                     
-                                          
-                                             
-                                              
-                      
-                     
-                                          
-                                              
-                                              
-                      
-                     
-                                      
-                                                    
-                                                    
-                      
-                     
-                                            
-                                                    
-                                                    
-                      
-                     
-                                      
-                                                  
-                                                  
-                      
-                     
-                                            
-                                                  
-                      
-                    
-                    
-                                      
-                      
-                      
-                    
-                    
-                                            
-                                                
-                    
-                    
-                      
-                                                  
-                      
-                    
-                      
-                      
-                      
-                    
-                     
-                                      
-                                            
-                                              
-                      
-                     
-                      
-                      
-                      
-                    
-                     
-                                      
-                                          
-                                            
-                      
-                     
-                                      
-                                              
-                                              
-                      
-                     
-                                      
-                                            
-                                                
-                    
-                  
-                            
-
-                            
-
-                            
-                    
-                    
-                                          
-                      
-                        
-                                          
-                      
-                                          
-
-                          
-                    
-                      
-                                              
-                        
-                              
-                    
-
-                            
-                          
-                                                  
-                            
-                            
-                          
-                                                    
-
-      
-                                                    
-                            
-                                                      
-                                                    
-                              
-                                                          
-                              
-                                                          
-                                       
-                                             
-                                
-                              
-                                     
-                                           
-                              
-                            
-                                                     
-                                          
-                              
-                                                
-                                                          
-                                  
-                                
-                                                                             
-                                
-                                                                           
-                              
-                            
-                              
-
-                            
+// Vim keybindings// [//   // scroll up/down using ctrl + j/k//   {//     "key": "ctrl-j",//     "command": "scrollLineDown",//     "when": "vim.mode == 'Normal'"//   },//   {//     "key": "ctrl-k",//     "command": "scrollLineUp",//     "when": "vim.mode == 'Normal'"//   },//   // toggle sidebar visibility using ctrl + b//   {//     "key": "ctrl+b",//     "command": "workbench.action.toggleSidebarVisibility",//     "when": "vim.mode == 'Normal'"//   },//   // toggle focus on file explorer using ctrl + e//   {//     "key": "ctrl+e",//     "command": "workbench.view.explorer",//     "when": "viewContainer.workbench.view.explorer.enabled"//   },//   // format code using shift+alt+f//   {//     "key": "shift+alt+f",//     "command": "editor.action.formatDocument",//     "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"//   },//   // search for files using ctrl+alt+f//   {//     "key": "ctrl+alt+f",//     "command": "workbench.action.quickOpen",//     "when": "vim.mode == 'Normal'"//   },//   {//     // navigate between open buffers using ctrl + n/p//     "key": "ctrl+n",//     "command": "workbench.action.nextEditorInGroup",//     "when": "vim.mode == 'Normal'"//   },//   {//     "key": "ctrl+p",//     "command": "workbench.action.previousEditorInGroup",//     "when": "vim.mode == 'Normal'"//   },//   // close current file using ctrl+q//   {//     "key": "ctrl+q",//     "command": "workbench.action.closeActiveEditor",//     "when": "vim.mode == 'Normal'"//   },//   // move lines up/down using alt+j/k//   {//     "key": "alt+j",//     "command": "editor.action.moveLinesDownAction",//     "when": "editorTextFocus && !editorReadonly"//   },//   {//     "key": "alt+k",//     "command": "editor.action.moveLinesUpAction",//     "when": "editorTextFocus && !editorReadonly"//   },//   // copy lines up/down using shift+alt+j/k//   {//     "key": "shift+alt+j",//     "command": "editor.action.copyLinesDownAction",//     "when": "editorTextFocus && !editorReadonly"//   },//   {//     "key": "shift+alt+k",//     "command": "editor.action.copyLinesUpAction",//     "when": "editorTextFocus && !editorReadonly"//   },//   // copy text up/down/left/right using shift + h/j/k/l//   // {//   //   "key": "shift+j",//   //   "command": "cursorDownSelect",//   //   "when": "textInputFocus"//   // },//   // {//   //   "key": "shift+k",//   //   "command": "cursorUpSelect",//   // move editor to left/right split using alt+h/l//   {//     "key": "alt+l",//     "command": "workbench.action.moveEditorToNextGroup",//     "when": "editorTextFocus"//   },//   {//     "key": "alt+h",//     "command": "workbench.action.moveEditorToPreviousGroup",//     "when": "editorTextFocus"//   },//   // file crud keymaps in file explorer//   {//     "key": "r",//     "command": "renameFile",//     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"//   },//   {//     "key": "c",//     "command": "filesExplorer.copy",//     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"//   },//   {//     "key": "p",//     "command": "filesExplorer.paste",//     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"//   },//   {//     "key": "x",//     "command": "filesExplorer.cut",//     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"//   },//   {//     "key": "d",//     "command": "deleteFile",//     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"//   },//   {//     "key": "a",//     "command": "explorer.newFile",//     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"//   },//   {//     "key": "m",//     "command": "workbench.files.action.collapseExplorerFolders",//     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"//   },//   // bind ctrl+d/u to move 10 lines up/down//   {//     "key": "ctrl+alt+j",//     "command": "cursorMove",//     "args": {//       "to": "down",//       "by": "line",//       "value": 10//     },//     "when": "vim.mode == 'Normal' && textInputFocus"//   },//   {//     "key": "ctrl+alt+k",//     "command": "cursorMove",//     "args": {//       "to": "up",//       "by": "line",//       "value": 10//     },//     "when": "vim.mode == 'Normal' && textInputFocus"//   },//   {//     "key": "ctrl+alt+l",//     "command": "cursorEnd",//     "when": "textInputFocus"//   },//   {//     "key": "ctrl+alt+h",//     "command": "cursorHome",//     "when": "textInputFocus"//   },//   {//     "key": "ctrl+h",//     "command": "cursorWordLeft",//     "when": "vim.mode == 'Normal' && textInputFocus"//   },//   {//     "key": "ctrl+l",//     "command": "cursorWordRight", //     "when": "vim.mode == 'Normal' && textInputFocus"//   },//   {//     "key": "ctrl+t",//     "command": "workbench.action.terminal.toggleTerminal",//     "when": "vim.mode == 'Normal'"//   },//   {//     "key": "ctrl+shift+l",//     "command": "workbench.action.chat.newChat",//     "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"//   },//   {//     "key": "ctrl+shift+k",//     "command": "aipopup.action.modal.generate",//     "when": "editorFocus && !composerBarIsVisible"//   },//   {//     "key": "ctrl+k",//     "command": "-aipopup.action.modal.generate",//     "when": "editorFocus && !composerBarIsVisible"//   },//   {//     "key": "ctrl+h",//     "command": "cursorLeft",//     "when": "vim.mode == 'Insert' && textInputFocus"//   },//   {//     "key": "ctrl+l", //     "command": "cursorRight",//     "when": "vim.mode == 'Insert' && textInputFocus"//   },//   {//     "key": "ctrl+j",//     "command": "cursorDown",//     "when": "vim.mode == 'Insert' && textInputFocus"//   },//   {//     "key": "ctrl+k",//     "command": "cursorUp", //     "when": "vim.mode == 'Insert' && textInputFocus"//   },//   {//     "key": "ctrl+j",//     "command": "selectNextSuggestion",//     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && vim.mode == 'Insert'"//   },//   {//     "key": "ctrl+k", //     "command": "selectPrevSuggestion",//     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && vim.mode == 'Insert'"//   },// ]// Regular keybindings[    {        "key": "ctrl+alt+s",        "command": "workbench.action.files.saveFiles"    },    {        "key": "ctrl+alt+right",        "command": "cursorEnd",        "when": "textInputFocus"    },    {        "key": "end",        "command": "-cursorEnd",        "when": "textInputFocus"    },    {        "key": "ctrl+alt+left",        "command": "cursorHome",        "when": "textInputFocus"    },    {        "key": "home",        "command": "-cursorHome",        "when": "textInputFocus"    },    {        "key": "ctrl+alt+up",        "command": "cursorMove",        "args": {            "to": "up",            "by": "line",            "value": 10        },        "when": "editorTextFocus"    },    {        "key": "ctrl+alt+down",        "command": "cursorMove",        "args": {            "to": "down",            "by": "line",            "value": 10        },        "when": "editorTextFocus"    },    {        "key": "alt+right",        "command": "workbench.action.moveEditorToNextGroup"    },    {        "key": "ctrl+alt+right",        "command": "-workbench.action.moveEditorToNextGroup"    },    {        "key": "alt+left",        "command": "workbench.action.moveEditorToPreviousGroup"    },    {        "key": "ctrl+alt+left",        "command": "-workbench.action.moveEditorToPreviousGroup"    },    {        "key": "ctrl+n",        "command": "explorer.newFile",        "when": "explorerViewletFocus"    },    {        "key": "ctrl+n",        "command": "workbench.action.nextEditor",        "when": "editorTextFocus"    },    {        "key": "ctrl+p",        "command": "workbench.action.previousEditor",        "when": "editorTextFocus"    },    {        "key": "ctrl+r",        "command": "renameFile",        "when": "explorerViewletFocus"    },    {        "key": "ctrl+m",        "command": "workbench.files.action.collapseExplorerFolders",        "when": "explorerViewletFocus"    },    {        "key": "ctrl+d",        "command": "deleteFile",        "when": "explorerViewletFocus"    },    {        "key": "ctrl+p",        "command": "-workbench.action.quickOpen"    },    {        "key": "ctrl+alt+f",        "command": "workbench.action.quickOpen"    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "viewContainer.workbench.view.explorer.enabled"    },    {        "key": "ctrl+shift+e",        "command": "-workbench.view.explorer",        "when": "viewContainer.workbench.view.explorer.enabled"    },    {        "key": "ctrl+shift+alt+up",        "command": "cursorMove",        "args": {            "to": "up",            "by": "line",            "value": 10,            "select": true        },        "when": "editorTextFocus"    },    {        "key": "ctrl+shift+alt+down",        "command": "cursorMove",        "args": {            "to": "down",            "by": "line",            "value": 10,            "select": true        },        "when": "editorTextFocus"    },    {        "key": "ctrl+shift+alt+right",        "command": "cursorEndSelect",        "when": "editorTextFocus"    },    {        "key": "ctrl+shift+alt+left",        "command": "cursorHomeSelect",        "when": "editorTextFocus"    },    {        "key": "ctrl+l",        "command": "expandLineSelection",        "when": "textInputFocus"    },    {        "key": "ctrl+p",        "command": "-expandLineSelection",        "when": "textInputFocus"    },    {        "key": "ctrl+enter",        "command": "-github.copilot.generate",        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"    },    {        "key": "shift+alt+up",        "command": "-editor.action.insertCursorAbove",        "when": "editorTextFocus"    },    {        "key": "ctrl+shift+alt+up",        "command": "-editor.action.copyLinesUpAction",        "when": "editorTextFocus && !editorReadonly"    },    {        "key": "shift+alt+down",        "command": "-editor.action.insertCursorBelow",        "when": "editorTextFocus"    },    {        "key": "ctrl+shift+alt+down",        "command": "-editor.action.copyLinesDownAction",        "when": "editorTextFocus && !editorReadonly"    },    {        "key": "shift+alt+up",        "command": "editor.action.copyLinesUpAction"    },    {        "key": "shift+alt+down",        "command": "editor.action.copyLinesDownAction"    },    {        "key": "ctrl+shift+down",        "command": "-editor.action.insertCursorBelow",        "when": "editorTextFocus"    },    {        "key": "ctrl+shift+up",        "command": "-editor.action.insertCursorAbove",        "when": "editorTextFocus"    },    {        "key": "shift+alt+f",        "command": "-filesExplorer.findInFolder",        "when": "explorerResourceIsFolder && filesExplorerFocus && foldersViewVisible && !inputFocus"    },    {        "key": "shift+alt+f",        "command": "-search.action.restrictSearchToFolder",        "when": "folderMatchWithResourceFocus && searchViewletVisible"    },    {        "key": "shift+alt+f",        "command": "editor.action.formatDocument",        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"    },    {        "key": "ctrl+shift+i",        "command": "-editor.action.formatDocument",        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"    },    {        "key": "ctrl+y",        "command": "-aichat.newfollowupaction"    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]    },    {        "key": "ctrl+e",        "command": "workbench.view.explorer",        "when": "terminalFocus"    },    {        "key": "ctrl+i",        "command": "composerMode.agent"    },    {        "key": "ctrl+q",        "command": "workbench.action.closeActiveEditor"    },    {        "key": "ctrl+q",        "command": "-workbench.action.quit"    }]

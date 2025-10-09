@@ -27,7 +27,7 @@ return {
     local filename = {
       'filename',
       file_status = true,
-      path = 0,
+      path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path, 3 = absolute path with ~ for home
     }
 
     local hide_in_width = function()

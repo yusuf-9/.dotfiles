@@ -8,7 +8,7 @@ return {
     -- Key mappings
     vim.g.VM_maps = {
       -- Find word under cursor (start multi-cursor)
-      ['Find Under'] = '<C-d>',
+      ['Find Under'] = '<C-S-d>',
       -- Find next occurrence (add to selection)
       ['Find Next'] = 'n',
       -- Skip next occurrence
@@ -17,7 +17,7 @@ return {
       ['Skip Region'] = 'q',
       -- Exit multi-cursor mode
       ['Exit'] = '<Esc>',
-      ['Visual Add'] = '<C-d>', -- reuse <C-d> in visual mode
+      ['Visual Add'] = '<C-S-d>', -- reuse <C-d> in visual mode
     }
 
     -- Disable default mappings we don't want

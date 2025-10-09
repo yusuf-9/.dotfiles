@@ -16,3 +16,4 @@ return {
     { "<leader>cr", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Reject diff" },
   }
 }
+

@@ -35,5 +35,5 @@ require('lazy').setup {
   require 'plugins.multicursor',
   require 'plugins.scrollbar',
   require 'plugins.ai-autocomplete',
-  require 'plugins.ai-agent',
+  -- require 'plugins.ai-agent',
 }
