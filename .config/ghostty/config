@@ -1,0 +1,27 @@
+fullscreen = false
+theme = rose-pine
+background= #000000
+
+# Unbind ctrl+alt arrows
+keybind = ctrl+alt+up=unbind
+keybind = ctrl+alt+down=unbind
+keybind = ctrl+alt+left=unbind
+keybind = ctrl+alt+right=unbind
+
+# Unbind ctrl+shift arrows
+keybind = ctrl+shift+up=unbind
+keybind = ctrl+shift+down=unbind
+keybind = ctrl+shift+left=unbind
+keybind = ctrl+shift+right=unbind
+
+# Unbind ctrl+alt+shift arrows
+keybind = ctrl+alt+shift+up=unbind
+keybind = ctrl+alt+shift+down=unbind
+keybind = ctrl+alt+shift+left=unbind
+keybind = ctrl+alt+shift+right=unbind
+
+# Unbind ctrl + enter
+keybind = ctrl+enter=unbind
+keybind = ctrl+shift+enter=toggle_fullscreen
+
+window-decoration = false
