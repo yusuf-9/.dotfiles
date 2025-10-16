@@ -1,43 +1,57 @@
 // Vim keybindings
 
 [
-  // scroll up/down using ctrl + j/k
+  // === FILE OPERATIONS ===
+  // save file using ctrl+s
   {
-    "key": "ctrl-j",
+    "key": "ctrl+s",
+    "command": "workbench.action.files.save",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // save file without auto-formatting using ctrl+shift+n
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.files.saveWithoutFormatting",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // === SCROLLING ===
+  // scroll up/down using ctrl + j/k (matching Neovim behavior)
+  {
+    "key": "ctrl+j",
     "command": "scrollLineDown",
     "when": "vim.mode == 'Normal'"
   },
   {
-    "key": "ctrl-k",
+    "key": "ctrl+k",
     "command": "scrollLineUp",
     "when": "vim.mode == 'Normal'"
   },
-  // toggle sidebar visibility using ctrl + b
+  // scroll 10 lines up/down using ctrl+d/u (matching Neovim behavior)
   {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal'"
-  },
-  // toggle focus on file explorer using ctrl + e
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  // format code using shift+alt+f
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.formatDocument",
-    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-  },
-  // search for files using ctrl+alt+f
-  {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.quickOpen",
-    "when": "vim.mode == 'Normal'"
+    "key": "ctrl+d",
+    "command": "cursorMove",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "value": 10
+    },
+    "when": "vim.mode == 'Normal' && textInputFocus"
   },
   {
-    // navigate between open buffers using ctrl + n/p
+    "key": "ctrl+u",
+    "command": "cursorMove",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "value": 10
+    },
+    "when": "vim.mode == 'Normal' && textInputFocus"
+  },
+
+  // === BUFFER NAVIGATION ===
+  // navigate between open buffers using ctrl + n/p
+  {
     "key": "ctrl+n",
     "command": "workbench.action.nextEditorInGroup",
     "when": "vim.mode == 'Normal'"
@@ -53,6 +67,113 @@
     "command": "workbench.action.closeActiveEditor",
     "when": "vim.mode == 'Normal'"
   },
+
+  // === WINDOW MANAGEMENT ===
+  // toggle sidebar visibility using ctrl + b
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "vim.mode == 'Normal'"
+  },
+  // toggle focus on file explorer using ctrl + e
+  {
+    "key": "ctrl+e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  // split window vertically using alt+l/h
+  {
+    "key": "alt+l",
+    "command": "workbench.action.splitEditorRight",
+    "when": "vim.mode == 'Normal'"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.splitEditorLeft",
+    "when": "vim.mode == 'Normal'"
+  },
+  // make split windows equal width & height using alt+=
+  {
+    "key": "alt+=",
+    "command": "workbench.action.evenEditorWidths",
+    "when": "vim.mode == 'Normal'"
+  },
+  // close current split window using alt+q
+  {
+    "key": "alt+q",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "vim.mode == 'Normal'"
+  },
+
+  // === MOVEMENT ===
+  // jump words back/forward with ctrl+h/l
+  {
+    "key": "ctrl+h",
+    "command": "cursorWordLeft",
+    "when": "vim.mode == 'Normal' && textInputFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "cursorWordRight",
+    "when": "vim.mode == 'Normal' && textInputFocus"
+  },
+  // jump to end/start of line using ctrl+alt+h/l
+  {
+    "key": "ctrl+alt+h",
+    "command": "cursorHome",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "cursorEnd",
+    "when": "textInputFocus"
+  },
+  // move 10 lines up/down using ctrl+alt+j/k
+  {
+    "key": "ctrl+alt+j",
+    "command": "cursorMove",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "value": 10
+    },
+    "when": "vim.mode == 'Normal' && textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "cursorMove",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "value": 10
+    },
+    "when": "vim.mode == 'Normal' && textInputFocus"
+  },
+
+  // === INSERT MODE MOVEMENT ===
+  // move around with ctrl + h/j/k/l in insert mode
+  {
+    "key": "ctrl+h",
+    "command": "cursorLeft",
+    "when": "vim.mode == 'Insert' && textInputFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "cursorRight",
+    "when": "vim.mode == 'Insert' && textInputFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "cursorDown",
+    "when": "vim.mode == 'Insert' && textInputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "cursorUp",
+    "when": "vim.mode == 'Insert' && textInputFocus"
+  },
+
+  // === LINE MANIPULATION ===
   // move lines up/down using alt+j/k
   {
     "key": "alt+j",
@@ -75,26 +196,45 @@
     "command": "editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // copy text up/down/left/right using shift + h/j/k/l
+
+  // === SEARCH AND FIND ===
+  // search for files using ctrl+alt+f (Telescope find_files equivalent)
+  {
+    "key": "ctrl+alt+f",
+    "command": "workbench.action.quickOpen",
+    "when": "vim.mode == 'Normal'"
+  },
+  // search in current buffer using ctrl+f (Telescope current_buffer_fuzzy_find equivalent)
+  {
+    "key": "ctrl+f",
+    "command": "workbench.action.findInFiles",
+    "when": "vim.mode == 'Normal'"
+  },
+  // live grep using leader+f (Telescope live_grep equivalent)
+  // REMOVED: disables leader key, so you can type space freely everywhere
   // {
-  //   "key": "shift+j",
-  //   "command": "cursorDownSelect",
-  //   "when": "textInputFocus"
+  //   "key": "space f",
+  //   "command": "workbench.action.findInFiles",
+  //   "when": "vim.mode == 'Normal'"
   // },
-  // {
-  //   "key": "shift+k",
-  //   "command": "cursorUpSelect",
-  // move editor to left/right split using alt+h/l
+
+  // === TERMINAL ===
+  // toggle terminal using ctrl+t
   {
-    "key": "alt+l",
-    "command": "workbench.action.moveEditorToNextGroup",
-    "when": "editorTextFocus"
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "vim.mode == 'Normal'"
   },
+
+  // === FORMATTING ===
+  // format code using shift+alt+f
   {
-    "key": "alt+h",
-    "command": "workbench.action.moveEditorToPreviousGroup",
-    "when": "editorTextFocus"
+    "key": "shift+alt+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
   },
+
+  // === FILE EXPLORER SHORTCUTS ===
   // file crud keymaps in file explorer
   {
     "key": "r",
@@ -131,57 +271,59 @@
     "command": "workbench.files.action.collapseExplorerFolders",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  // bind ctrl+d/u to move 10 lines up/down
+
+
+  // === SUGGESTION NAVIGATION ===
+  // navigate suggestions using ctrl+j/k in insert mode
   {
-    "key": "ctrl+alt+j",
-    "command": "cursorMove",
-    "args": {
-      "to": "down",
-      "by": "line",
-      "value": 10
-    },
-    "when": "vim.mode == 'Normal' && textInputFocus"
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && vim.mode == 'Insert'"
   },
   {
-    "key": "ctrl+alt+k",
-    "command": "cursorMove",
-    "args": {
-      "to": "up",
-      "by": "line",
-      "value": 10
-    },
-    "when": "vim.mode == 'Normal' && textInputFocus"
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && vim.mode == 'Insert'"
+  },
+  // navigate command palette using ctrl+j/k
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
   },
   {
-    "key": "ctrl+alt+l",
-    "command": "cursorEnd",
-    "when": "textInputFocus"
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
   },
+
+  // === MULTI-CURSOR EDITING ===
+  // multi-cursor editing using ctrl+shift+d (replaces gb)
   {
-    "key": "ctrl+alt+h",
-    "command": "cursorHome",
-    "when": "textInputFocus"
+    "key": "ctrl+shift+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus && !editorReadonly"
   },
+  // disable original gb command
   {
-    "key": "ctrl+h",
-    "command": "cursorWordLeft",
-    "when": "vim.mode == 'Normal' && textInputFocus"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "cursorWordRight", 
-    "when": "vim.mode == 'Normal' && textInputFocus"
-  },
-  {
-    "key": "ctrl+t",
-    "command": "workbench.action.terminal.toggleTerminal",
+    "key": "g b",
+    "command": "-editor.action.addSelectionToNextFindMatch",
     "when": "vim.mode == 'Normal'"
   },
+  // exit multi-cursor mode using esc
   {
-    "key": "ctrl+shift+l",
-    "command": "workbench.action.chat.newChat",
-    "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"
+    "key": "escape",
+    "command": "removeSecondaryCursors",
+    "when": "editorHasMultipleSelections && textInputFocus"
   },
+
+  // === AI/CHAT FEATURES ===
+  // toggle chat view using ctrl+m
+  {
+    "key": "ctrl+m",
+    "command": "composerMode.agent",
+  },
+  // AI chat and generation shortcuts
   {
     "key": "ctrl+shift+k",
     "command": "aipopup.action.modal.generate",
@@ -192,36 +334,14 @@
     "command": "-aipopup.action.modal.generate",
     "when": "editorFocus && !composerBarIsVisible"
   },
+  // === SEARCH AND FIND ===
+  // search for files using ctrl+alt+f (Telescope find_files equivalent)
   {
-    "key": "ctrl+h",
-    "command": "cursorLeft",
-    "when": "vim.mode == 'Insert' && textInputFocus"
-  },
-  {
-    "key": "ctrl+l", 
-    "command": "cursorRight",
-    "when": "vim.mode == 'Insert' && textInputFocus"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "cursorDown",
-    "when": "vim.mode == 'Insert' && textInputFocus"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "cursorUp", 
-    "when": "vim.mode == 'Insert' && textInputFocus"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && vim.mode == 'Insert'"
-  },
-  {
-    "key": "ctrl+k", 
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus && vim.mode == 'Insert'"
-  },
+    "key": "ctrl+f",
+    "command": "workbench.action.quickOpen",
+    "when": "vim.mode == 'Normal'"
+  }
+
 ]
 
 // Regular keybindings
@@ -332,6 +452,7 @@
 //     },
 //     {
 //         "key": "ctrl+shift+e",
+
 //         "command": "-workbench.view.explorer",
 //         "when": "viewContainer.workbench.view.explorer.enabled"
 //     },
@@ -414,6 +535,7 @@
 //         "key": "ctrl+shift+down",
 //         "command": "-editor.action.insertCursorBelow",
 //         "when": "editorTextFocus"
+
 //     },
 //     {
 //         "key": "ctrl+shift+up",
@@ -480,6 +602,7 @@
 //     },
 //     {
 //         "key": "ctrl+e",
+
 //         "command": "workbench.view.explorer",
 //         "when": "terminalFocus"
 //     },
@@ -498,6 +621,98 @@
 //     {
 //         "key": "ctrl+e",
 //         "command": "workbench.view.explorer",
+//         "when": "terminalFocus"
+//     },
+//     {
+//         "key": "ctrl+i",
+//         "command": "composerMode.agent"
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "workbench.action.closeActiveEditor"
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "-workbench.action.quit"
+//     },
+
+//     {
+//         "key": "ctrl+e",
+//         "command": "workbench.view.explorer",
+//         "when": "terminalFocus"
+//     },
+//     {
+//         "key": "ctrl+i",
+//         "command": "composerMode.agent"
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "workbench.action.closeActiveEditor"
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "-workbench.action.quit"
+//     },
+
+//     {
+//         "key": "ctrl+e",
+//         "command": "workbench.view.explorer",
+//         "when": "terminalFocus"
+//     },
+//     {
+//         "key": "ctrl+i",
+//         "command": "composerMode.agent"
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "workbench.action.closeActiveEditor"
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "-workbench.action.quit"
+//     },
+
+//     {
+//         "key": "ctrl+e",
+//         "command": "workbench.view.explorer",
+//         "when": "terminalFocus"
+//     },
+//     {
+//         "key": "ctrl+i",
+//         "command": "composerMode.agent"
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "workbench.action.closeActiveEditor"
+
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "-workbench.action.quit"
+//     },
+
+//     {
+//         "key": "ctrl+e",
+//         "command": "workbench.view.explorer",
+//         "when": "terminalFocus"
+//     },
+//     {
+//         "key": "ctrl+i",
+//         "command": "composerMode.agent"
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "workbench.action.closeActiveEditor"
+//     },
+//     {
+//         "key": "ctrl+q",
+//         "command": "-workbench.action.quit"
+//     },
+
+//     {
+//         "key": "ctrl+e",
+//         "command": "workbench.view.explorer",
+
 //         "when": "terminalFocus"
 //     },
 //     {
@@ -615,96 +830,7 @@
 //     {
 //         "key": "ctrl+q",
 //         "command": "workbench.action.closeActiveEditor"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "-workbench.action.quit"
-//     },
 
-//     {
-//         "key": "ctrl+e",
-//         "command": "workbench.view.explorer",
-//         "when": "terminalFocus"
-//     },
-//     {
-//         "key": "ctrl+i",
-//         "command": "composerMode.agent"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "workbench.action.closeActiveEditor"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "-workbench.action.quit"
-//     },
-
-//     {
-//         "key": "ctrl+e",
-//         "command": "workbench.view.explorer",
-//         "when": "terminalFocus"
-//     },
-//     {
-//         "key": "ctrl+i",
-//         "command": "composerMode.agent"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "workbench.action.closeActiveEditor"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "-workbench.action.quit"
-//     },
-
-//     {
-//         "key": "ctrl+e",
-//         "command": "workbench.view.explorer",
-//         "when": "terminalFocus"
-//     },
-//     {
-//         "key": "ctrl+i",
-//         "command": "composerMode.agent"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "workbench.action.closeActiveEditor"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "-workbench.action.quit"
-//     },
-
-//     {
-//         "key": "ctrl+e",
-//         "command": "workbench.view.explorer",
-//         "when": "terminalFocus"
-//     },
-//     {
-//         "key": "ctrl+i",
-//         "command": "composerMode.agent"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "workbench.action.closeActiveEditor"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "-workbench.action.quit"
-//     },
-
-//     {
-//         "key": "ctrl+e",
-//         "command": "workbench.view.explorer",
-//         "when": "terminalFocus"
-//     },
-//     {
-//         "key": "ctrl+i",
-//         "command": "composerMode.agent"
-//     },
-//     {
-//         "key": "ctrl+q",
-//         "command": "workbench.action.closeActiveEditor"
 //     },
 //     {
 //         "key": "ctrl+q",
@@ -729,3 +855,4 @@
 //         "command": "-workbench.action.quit"
 //     }
 // ]
+
