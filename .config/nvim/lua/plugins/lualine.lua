@@ -52,10 +52,62 @@ return {
       cond = hide_in_width,
     }
 
+    -- Custom VS Code-like theme with mode-specific colors
+    local vscode_theme = {
+      normal = {
+        a = { bg = '#006161', fg = '#ffffff', gui = 'bold' },
+        b = { bg = '#006161', fg = '#ffffff' },
+        c = { bg = '#006161', fg = '#ffffff' },
+        x = { bg = '#006161', fg = '#ffffff' },
+        y = { bg = '#006161', fg = '#ffffff' },
+        z = { bg = '#006161', fg = '#ffffff', gui = 'bold' },
+      },
+      insert = {
+        a = { bg = '#530000', fg = '#ffffff', gui = 'bold' },
+        b = { bg = '#530000', fg = '#ffffff' },
+        c = { bg = '#530000', fg = '#ffffff' },
+        x = { bg = '#530000', fg = '#ffffff' },
+        y = { bg = '#530000', fg = '#ffffff' },
+        z = { bg = '#530000', fg = '#ffffff', gui = 'bold' },
+      },
+      visual = {
+        a = { bg = '#6a0dad', fg = '#ffffff', gui = 'bold' },
+        b = { bg = '#6a0dad', fg = '#ffffff' },
+        c = { bg = '#6a0dad', fg = '#ffffff' },
+        x = { bg = '#6a0dad', fg = '#ffffff' },
+        y = { bg = '#6a0dad', fg = '#ffffff' },
+        z = { bg = '#6a0dad', fg = '#ffffff', gui = 'bold' },
+      },
+      replace = {
+        a = { bg = '#ff6600', fg = '#ffffff', gui = 'bold' },
+        b = { bg = '#ff6600', fg = '#ffffff' },
+        c = { bg = '#ff6600', fg = '#ffffff' },
+        x = { bg = '#ff6600', fg = '#ffffff' },
+        y = { bg = '#ff6600', fg = '#ffffff' },
+        z = { bg = '#ff6600', fg = '#ffffff', gui = 'bold' },
+      },
+      command = {
+        a = { bg = '#0066cc', fg = '#ffffff', gui = 'bold' },
+        b = { bg = '#0066cc', fg = '#ffffff' },
+        c = { bg = '#0066cc', fg = '#ffffff' },
+        x = { bg = '#0066cc', fg = '#ffffff' },
+        y = { bg = '#0066cc', fg = '#ffffff' },
+        z = { bg = '#0066cc', fg = '#ffffff', gui = 'bold' },
+      },
+      inactive = {
+        a = { bg = '#404040', fg = '#ffffff' },
+        b = { bg = '#404040', fg = '#ffffff' },
+        c = { bg = '#404040', fg = '#ffffff' },
+        x = { bg = '#404040', fg = '#ffffff' },
+        y = { bg = '#404040', fg = '#ffffff' },
+        z = { bg = '#404040', fg = '#ffffff' },
+      },
+    }
+
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        theme = 'nord',
+        theme = vscode_theme,
         section_separators = { left = '', right = '' },
         component_separators = { left = '', right = '' },
         disabled_filetypes = { 'alpha', 'neo-tree' },
@@ -82,3 +134,4 @@ return {
     }
   end,
 }
+
