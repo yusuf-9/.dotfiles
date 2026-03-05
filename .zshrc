@@ -1,0 +1,13 @@
+# Customer Aliases
+alias devw='cd ~/Desktop/dev/work'
+alias devp='cd ~/Desktop/dev/projects'
+alias c='clear'
+alias nv='nvim'
+alias gp='git pull'
+alias gc='git commit'
+alias gC='git checkout'
+alias gs='git status'
+alias ga='git add'
+alias gP='git push'
+alias gb='git branch'
+alias nconf='cd ~/.config/nvim'
