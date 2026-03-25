@@ -1,19 +1,9 @@
 return {
-  "coder/claudecode.nvim",
-  dependencies = { "folke/snacks.nvim" }, -- Optional but recommended
+  "xTacobaco/cursor-agent.nvim",
   config = function()
-    require("claudecode").setup({
-      auto_start = true,
-      track_selection = true,
-      focus_after_send = true,
-    })
+    vim.keymap.set("n", "<leader>c", ":CursorAgent<CR>", { desc = "Cursor Agent: Toggle terminal" })
+    vim.keymap.set("v", "<leader>cs", ":CursorAgentSelection<CR>", { desc = "Cursor Agent: Send selection" })
+    vim.keymap.set("n", "<leader>cb", ":CursorAgentBuffer<CR>", { desc = "Cursor Agent: Send buffer" })
   end,
-  keys = {
-    { "<leader>cc", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
-    { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
-    { "<leader>cs", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
-    { "<leader>ca", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
-    { "<leader>cr", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Reject diff" },
-  }
-}
+} 
 
