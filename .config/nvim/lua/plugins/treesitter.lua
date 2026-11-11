@@ -6,6 +6,7 @@ return {
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
   opts = {
     ensure_installed = {
+      'c',
       'lua',
       'javascript',
       'typescript',
@@ -23,6 +24,10 @@ return {
       'html',
       'rust',
       'jsx',
+      'go',
+      'gomod',
+      'gowork',
+      'gosum',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,

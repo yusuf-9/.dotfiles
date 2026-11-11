@@ -35,7 +35,8 @@ return { -- Autoformat
       lua = { 'stylua' },
       javascript = { 'eslint' },
       typescript = { 'eslint' },
-      rust = { 'rustfmt' },
+      go = { 'goimports', 'gofumpt' },
+      -- rust = { 'rustfmt' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --

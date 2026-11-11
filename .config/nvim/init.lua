@@ -1,4 +1,4 @@
-require 'core.options' -- Load general options
+require 'core.options' -- Loed general options
 require 'core.keymaps' -- Load general keymaps
 require 'core.snippets' -- Custom code snippets
 
@@ -35,5 +35,7 @@ require('lazy').setup {
   require 'plugins.scrollbar',
   require 'plugins.ai-autocomplete',
   require 'plugins.lazygit',
+  -- require 'plugins.noice',
+  -- require  'plugins.markdown',
   -- require 'plugins.ai-agent',
 }

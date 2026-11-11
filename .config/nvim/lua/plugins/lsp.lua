@@ -177,8 +177,8 @@ return {
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
-      -- clangd = {},
-      -- gopls = {},
+      clangd = {},
+      gopls = {},
       -- pyright = {},
       rust_analyzer = {
         -- -- Enable clippy on save
@@ -284,7 +284,9 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
-      'rustfmt', -- Used to format Rust code
+      'gofumpt', -- Used to format Go code
+      'goimports', -- Used to organize Go imports
+      -- 'rustfmt', -- Used to format Rust code
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

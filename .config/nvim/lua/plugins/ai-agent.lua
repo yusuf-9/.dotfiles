@@ -1,9 +1,6 @@
 return {
-  "xTacobaco/cursor-agent.nvim",
+  "felixcuello/neovim-cursor",
   config = function()
-    vim.keymap.set("n", "<leader>c", ":CursorAgent<CR>", { desc = "Cursor Agent: Toggle terminal" })
-    vim.keymap.set("v", "<leader>cs", ":CursorAgentSelection<CR>", { desc = "Cursor Agent: Send selection" })
-    vim.keymap.set("n", "<leader>cb", ":CursorAgentBuffer<CR>", { desc = "Cursor Agent: Send buffer" })
+    require("neovim-cursor").setup()
   end,
-} 
-
+}
